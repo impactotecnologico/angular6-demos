@@ -15,13 +15,23 @@ export class FormularioReactivo2Component implements OnInit {
 
   public ngOnInit() {
 
-    let firstName: FormControl = ['', Validators.required];
+    let firstName: FormControl = new FormControl();
+
+    firstName.setValue([Validators.required]);
 
     this.form = this.formBuilder.group({
       first_name: firstName,
       last_name: ['', Validators.required ],
       avatar: ''
     });
+
+    this.form.setValue({
+      first_name: '',
+      last_name: '',
+      avatar: ''
+    });
+
+
   }
 
   onSubmit(){
