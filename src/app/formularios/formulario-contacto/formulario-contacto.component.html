@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit(usuarioForm);" #usuarioForm="ngForm" >
+
+    <input placeholder="Primer Nombre" #primerNombre maxlength="10" [(ngModel)]="usuario.first_name" name="primerNombre" required> <br>
+    <input placeholder="Apellido" #apellido maxlength="10" [(ngModel)]="usuario.last_name" name="apellido" required> <br>
+    <input placeholder="Avatar" #avatar maxlength="10" [(ngModel)]="usuario.avatar" name="avatar" required> <br>
+
+    <button [disabled]="!usuarioForm.form.valid">Enviar</button>
+
+</form>
