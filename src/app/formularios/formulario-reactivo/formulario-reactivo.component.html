@@ -1,0 +1,15 @@
+<form [formGroup]="form" (submit)="onSubmit(form.value)">
+
+
+  <label for="first_name">Nombre:  </label>
+  <input name="first_name" formControlName="first_name" type="text" /> <br>
+
+  <label for="last_name">Apellido: </label>
+  <input name="last_name" formControlName="last_name" type="text" /> <br>
+
+  <label for="avatar">Avatar: </label>
+  <input name="avatar" formControlName="avatar" type="text" /> <br>
+
+
+
+  </form>
