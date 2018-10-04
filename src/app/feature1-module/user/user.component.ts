@@ -16,7 +16,7 @@ export class UserComponent implements OnInit, DoCheck {
   private usuarios: Array<User>;
   private responseLocal: Response;
 
-  constructor(private log: LoggerService, private remoteDataService:RemoteDataService) {
+  constructor(private log: LoggerService,  private remoteDataService:RemoteDataService) {
     log.setFileName('user.component.ts');
     log.log('Iniciado!!');
   }
